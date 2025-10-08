@@ -55,3 +55,29 @@
 
 ✅ **Result:** Carla server launched successfully (`-vulkan -nosound`).  
 ⏱ **Duration:** ~40 min.
+
+---
+
+### 🕒 12:15 — Behavior Agent Recording Script
+**Goal:** Run and stabilize Python script (`carla_record_behavior_agent.py`).
+
+**Actions**
+- Fixed `ModuleNotFoundError: No module named 'cv2'`.
+- Decided to install **full OpenCV** instead of headless (for future visualization).
+- Verified all imports worked correctly:  
+  `BehaviorAgent`, `GlobalRoutePlanner`, `PIL`, `numpy`, `matplotlib`, etc.
+- Confirmed image saving, FPS measurement, and spectator follow threads were functional.
+
+✅ **Result:** Core recording loop operational and stable.  
+⏱ **Duration:** ~1h.
+
+---
+
+### 🕒 13:15 — Traffic Light and Route Improvements
+**Goal:** Reduce waiting times at intersections and ensure proper ego spawn orientation.
+
+**Changes**
+```python
+light.set_red_time(2.0)
+light.set_yellow_time(1.0)
+light.set_green_time(4.0)
