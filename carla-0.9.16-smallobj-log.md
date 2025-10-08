@@ -1,13 +1,13 @@
-# 🧠 CARLA Development Log — October 7, 2025
+## 🧠 CARLA Development Log — October 7, 2025
 **Project:** Behavior Agent + Pygame Visualization  
-**Developer:** Muzaffer Çıtır  
+**Developer:** Muzaffer Citir  
 **Environment:** Docker (CARLA 0.9.16 custom)  
 **Machine:** RTX 4090, Ubuntu 22.04 container  
 **Total active work time:** ~7.5 hours  
 
 ---
 
-## 🕒 09:30 — Environment Troubleshooting
+### 🕒 09:30 — Environment Troubleshooting
 **Goal:** Reactivate GPU and Vulkan support inside the CARLA Docker container.
 
 **Actions & Issues**
@@ -26,7 +26,7 @@
 
 ---
 
-## 🕒 10:45 — Container Management & Cleanup
+### 🕒 10:45 — Container Management & Cleanup
 **Goal:** Properly handle stale CARLA containers blocking new sessions.
 
 **Actions**
@@ -43,7 +43,7 @@
 
 ---
 
-## 🕒 11:30 — Carla Server Re-Run with Vulkan
+### 🕒 11:30 — Carla Server Re-Run with Vulkan
 **Goal:** Run CARLA under Vulkan with full GPU acceleration.
 
 **Actions**
