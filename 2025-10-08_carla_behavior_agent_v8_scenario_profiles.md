@@ -1,4 +1,4 @@
-# 🧠 CARLA Behavior Agent Development Logbook
+## 🧠 CARLA Behavior Agent Development Logbook
 
 **Date:** 2025-10-08  
 **Project:** `carla_behavior_agent_v8_scenario_profiles`  
@@ -10,9 +10,9 @@
 
 ---
 
-## 🕓 Chronological Development Timeline
+### 🕓 Chronological Development Timeline
 
-### **00:15 – 00:45 | Core Stabilization**
+#### **00:15 – 00:45 | Core Stabilization**
 - Started from the previously stable `v7_flexible_ui` build.
 - Verified pedestrian AI walking logic and FPS measurements.
 - Observed that pedestrians were walking in place — fixed by ensuring controllers' destinations are regularly updated.
@@ -20,7 +20,7 @@
 
 ---
 
-### **00:45 – 01:30 | Configuration Refactor**
+#### **00:45 – 01:30 | Configuration Refactor**
 - Extracted parameters for easier runtime tuning:
   - Traffic-light durations (`RED/YELLOW/GREEN_TIME`)
   - Pedestrian density and speed range
@@ -30,7 +30,7 @@
 
 ---
 
-### **01:30 – 02:15 | Minimap Rewrite (pygame)**
+#### **01:30 – 02:15 | Minimap Rewrite (pygame)**
 - Replaced Matplotlib-based minimap with a lightweight **pygame overlay**.
 - Added padding and white background for better visual clarity.
 - Implemented `MINIMAP_POSITION` for adjustable screen placement.
@@ -39,7 +39,7 @@
 
 ---
 
-### **02:15 – 02:45 | Route Configuration Improvements**
+#### **02:15 – 02:45 | Route Configuration Improvements**
 - Integrated flexible route generation:
   - Added `ROUTE_MIN_DISTANCE` and `ROUTE_MAX_ATTEMPTS` to CONFIG.
   - Ensured route generation dynamically adapts based on scenario.
@@ -47,7 +47,7 @@
 
 ---
 
-### **02:45 – 03:15 | Debug Visual Optimization**
+#### **02:45 – 03:15 | Debug Visual Optimization**
 - Tuned 3D route line rendering:
   - Reduced thickness → `0.15`
   - Changed color → darker blue `(0, 0, 100)`
@@ -57,7 +57,7 @@
 
 ---
 
-### **03:15 – 04:00 | Scenario Profile System**
+#### **03:15 – 04:00 | Scenario Profile System**
 - Introduced **SCENARIO_PROFILES**, enabling predefined environment configurations:
   - `"city_rain"` → Wet Cloudy Noon, 80 pedestrians
   - `"sunny_suburb"` → Clear Noon, higher ego speed
@@ -71,7 +71,7 @@ CONFIG.update(SCENARIO_PROFILES[ACTIVE_SCENARIO])
 
 ---
 
-### **04:00 – 04:30 | Integration Test**
+#### **04:00 – 04:30 | Integration Test**
 - Ran full simulation cycles for all three profiles:
   - 🏙️ **city_rain:** smooth traffic flow, balanced exposure
   - 🌇 **sunny_suburb:** bright and stable visuals
@@ -81,14 +81,14 @@ CONFIG.update(SCENARIO_PROFILES[ACTIVE_SCENARIO])
 
 ---
 
-### **04:30 – 05:15 | Documentation & Logging**
+#### **04:30 – 05:15 | Documentation & Logging**
 - Verified FPS averages (≈ 17–20 FPS @ 1920×1280).
 - Confirmed `enable_postprocess_effects = True` preserves realistic camera output.
 - Reorganized repo layout and finalized naming:
 
 ---
 
-## 🧩 Technical Summary
+### 🧩 Technical Summary
 
 | Component | Description | Status |
 |-----------|-------------|--------|
@@ -103,7 +103,7 @@ CONFIG.update(SCENARIO_PROFILES[ACTIVE_SCENARIO])
 
 ---
 
-## ⏱️ Total Work Duration
+### ⏱️ Total Work Duration
 
 | Task | Duration |
 |------|----------|
